@@ -5,8 +5,8 @@ class Dollar {
         this.amount = value
     }
 
-    times() {
-        this.amount = 10
+    times(multiplier) {
+        this.amount *= multiplier
     }
 
 }
