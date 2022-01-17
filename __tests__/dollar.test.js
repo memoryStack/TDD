@@ -1,7 +1,9 @@
 const Dollar = require('../dollar/dollar')
 
 test('multiply dollar', () => {
-    const dollar = new Dollar(5)
-    dollar.times(2)
-    expect(dollar.amount).toBe(10)
+    const fiveDollar = new Dollar(5)
+    let product = fiveDollar.times(2)
+    expect(product.amount).toBe(10)
+    product = fiveDollar.times(3)
+    expect(product.amount).toBe(15)
 })
