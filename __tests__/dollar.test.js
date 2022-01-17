@@ -2,10 +2,8 @@ const Dollar = require('../dollar/dollar')
 
 test('multiply dollar', () => {
     const fiveDollar = new Dollar(5)
-    let product = fiveDollar.times(2)
-    expect(product.amount).toBe(10)
-    product = fiveDollar.times(3)
-    expect(product.amount).toBe(15)
+    expect(fiveDollar.times(2).equals(new Dollar(10))).toBe(true)
+    expect(fiveDollar.times(3).equals(new Dollar(15))).toBe(true)
 })
 
 // used "triangulation" analog in this test case for implementing the general
