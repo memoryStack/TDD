@@ -10,8 +10,6 @@ test('multiply dollar', () => {
 // solution of this requirement. read in chap3 for detailed reference
 test('equality check', () => {
     const fiveDollar = new Dollar(5)
-    const anotherFiveDollar = new Dollar(5)
-    expect(fiveDollar.equals(anotherFiveDollar)).toBe(true)
-    const sixDollar = new Dollar(6)
-    expect(fiveDollar.equals(sixDollar)).toBe(false)
+    expect(fiveDollar.equals(new Dollar(5))).toBe(true)
+    expect(fiveDollar.equals(new Dollar(6))).toBe(false)
 })
