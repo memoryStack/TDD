@@ -1,7 +1,9 @@
+const Money = require('../money/money')
 
-class Dollar {
+class Dollar extends Money {
     #amount
     constructor(value) {
+        super()
         this.#amount = value
     }
 
