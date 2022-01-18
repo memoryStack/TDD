@@ -1,5 +1,8 @@
+
 class Money {
-    constructor() {}
+    constructor(value) {
+        this.amount = value
+    }
 }
 
 module.exports = Money
