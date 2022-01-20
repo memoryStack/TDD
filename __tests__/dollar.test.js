@@ -1,4 +1,5 @@
 const Dollar = require('../dollar/dollar')
+const Franc = require('../franc/franc')
 
 test('multiply dollar', () => {
     const fiveDollar = new Dollar(5)
@@ -12,4 +13,6 @@ test('equality check dollar', () => {
     const fiveDollar = new Dollar(5)
     expect(fiveDollar.equals(new Dollar(5))).toBe(true)
     expect(fiveDollar.equals(new Dollar(6))).toBe(false)
+    expect(fiveDollar.equals(new Franc(5))).toBe(false)
+    expect((new Franc(5)).equals(new Dollar(5))).toBe(false)
 })

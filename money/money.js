@@ -6,8 +6,8 @@ class Money {
 
     equals(obj) {
         return this.amount === obj.amount
+            && (this.constructor.name === obj.constructor.name)
     }
-
 }
 
 module.exports = Money
