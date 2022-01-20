@@ -1,5 +1,3 @@
-const Dollar = require('../dollar/dollar')
-const Franc = require('../franc/franc')
 const Money = require('../money/money')
 
 test('multiply money', () => {
