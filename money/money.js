@@ -1,13 +1,19 @@
 
 class Money {
-    constructor(value) {
-        this.amount = value
+    constructor(amount, currency) {
+        this.amount = amount
+        this.currency = currency
     }
 
     equals(obj) {
         return this.amount === obj.amount
-            && (this.constructor.name === obj.constructor.name)
+            && this.currency === obj.currency
     }
+
+    times(multiplier) {
+        return new Money(this.amount * multiplier, this.currency)
+    }
+
 }
 
 module.exports = Money
